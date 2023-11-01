@@ -74,3 +74,6 @@ group :test do
   gem "webdrivers"
 
 end
+
+
+gem "phlex-rails", "~> 1.0"
