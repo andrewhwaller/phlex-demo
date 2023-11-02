@@ -75,3 +75,5 @@ group :test do
 end
 
 gem "phlex-rails", "~> 1.0"
+
+gem "phlex-testing-nokogiri", "~> 0.1.0"

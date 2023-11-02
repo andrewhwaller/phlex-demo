@@ -143,6 +143,9 @@ GEM
       phlex (~> 1.7)
       rails (>= 6.1, < 8)
       zeitwerk (~> 2.6)
+    phlex-testing-nokogiri (0.1.0)
+      nokogiri (~> 1.13)
+      phlex (>= 0.5)
     psych (5.1.1.1)
       stringio
     public_suffix (5.0.3)
@@ -240,6 +243,7 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   phlex-rails (~> 1.0)
+  phlex-testing-nokogiri (~> 0.1.0)
   puma (~> 5.0)
   rails (~> 7.0.8)
   selenium-webdriver
