@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get "phlexboard/index"
+
+  namespace :phlex do
+    resources :tasks
+    resources :posts
+  end
+
   resources :tasks
   resources :posts
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
   root "dashboard#index"
 end
