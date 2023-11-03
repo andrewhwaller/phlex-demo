@@ -2,12 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
+ul {
+    @apply list-disc list-inside;
 }
 
-*/
+ol {
+    @apply list-decimal list-inside;
+}
+
+.font-display {
+    font-size: 4rem;
+    @apply font-extrabold leading-tight tracking-tighter;
+}
+
+h1,
+.h1 {
+    font-size: 2.5rem;
+    @apply font-black leading-tight tracking-tighter text-primary-900;
+}
+
+h2,
+.h2 {
+    font-size: 2.0rem;
+    @apply font-extrabold leading-tight tracking-tighter text-primary-900;
+}
+
+h3,
+.h3 {
+    font-size: 1.5rem;
+    @apply font-extrabold leading-normal tracking-tight text-primary-900;
+}
+
+h4,
+.h4 {
+    font-size: 1.125rem;
+    @apply font-bold leading-normal tracking-tight text-primary-900;
+}
+
+h5,
+.h5 {
+    @apply font-bold uppercase tracking-wide text-sm text-primary-900;
+}
+
+h6,
+.h6 {
+    @apply font-bold uppercase tracking-wide text-xs text-primary-900;
+}
