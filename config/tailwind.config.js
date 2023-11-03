@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
@@ -11,8 +12,26 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        green: colors.emerald,
+        orange: colors.amber,
+        primary: colors.slate,
+        secondary: colors.blue,
+        tertiary: colors.emerald,
+        green: colors.emerald,
+        danger: colors.rose,
+        gray: colors.slate,
+        purple: colors.violet,
+        amber: colors.amber,
+        violet: colors.violet,
+        "code-400": "#fefcf9",
+        "code-600": "#3c455b",
+      },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', 'system-ui', ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        'xxs': '11px'
       },
     },
   },
