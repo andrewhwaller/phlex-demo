@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get "phlexboard/index"
-
   namespace :phlex do
+    get "dashboard/index"
     resources :tasks
     resources :posts
   end
