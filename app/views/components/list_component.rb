@@ -4,7 +4,7 @@ class ListComponent < ApplicationComponent
   include Phlex::DeferredRender
   include Phlex::Rails::Helpers::TurboFrameTag
 
-  def initialize(title:, empty_message:, frame_title:, item_name:, pagy: nil)
+  def initialize(title: nil, empty_message:, frame_title:, item_name:, pagy: nil)
     @title = title
     @empty_message = empty_message
     @frame_title = frame_title
@@ -15,7 +15,9 @@ class ListComponent < ApplicationComponent
 
   def template
     div(class: "flex flex-col gap-5") do
-      h3(class: "leading-6 text-gray-900") { @title }
+      if @title
+        h1(class: "font-bold text-4xl") { @title }
+      end
       turbo_frame_tag @frame_title, target: "_top" do
         div(class: "bg-white shadow overflow-hidden rounded-md") do
           if @list_items.any?
