@@ -15,8 +15,9 @@ class Posts::ListItemComponent < ApplicationComponent
           plain @post.content
         end
       end
-      div(class: "ml-5 flex-shrink-0") do
-        render LinkButtonComponent.new(text: "Edit", path: edit_post_path(@post))
+      div(class: "flex gap-3 ml-5 flex-shrink-0") do
+        render LinkButtonComponent.new(text: "Edit this post", path: edit_post_path(@post))
+        render LinkButtonComponent.new(text: "Show this post", path: post_path(@post))
       end
     end
   end
