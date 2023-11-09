@@ -3,14 +3,15 @@
 class LinkButtonComponent < ApplicationComponent
   include Phlex::Rails::Helpers::LinkTo
 
-  def initialize(text:, path:, type: nil)
+  def initialize(text:, path:, method: nil, type: nil, data: nil)
     @text = text
     @class = "ml-2 rounded-lg py-3 px-5 inline-block font-medium #{color_classes(type)}"
     @path = path
+    @method = method
   end
 
   def template
-    link_to(@text, @path, class: @class)
+    link_to(@text, @path, method: @method, class: @class, data: @data)
   end
 
   def color_classes(type)
