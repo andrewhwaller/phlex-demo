@@ -8,6 +8,7 @@ class LinkButtonComponent < ApplicationComponent
     @class = "ml-2 rounded-lg py-3 px-5 inline-block font-medium #{color_classes(type)}"
     @path = path
     @method = method
+    @data = data
   end
 
   def template
