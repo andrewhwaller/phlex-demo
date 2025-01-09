@@ -48,3 +48,7 @@ h6,
 .h6 {
     @apply font-bold uppercase tracking-wide text-xs text-primary-900;
 }
+
+.success {
+    @apply bg-green-500 hover:bg-green-700 text-white;
+}
